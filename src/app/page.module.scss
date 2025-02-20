@@ -1,0 +1,119 @@
+[web-v2/src/app/page.module.scss]
+$spotify-green: #1db954;
+$gray: #666;
+$light-gray: #f9f9f9;
+$dark-gray: #333;
+$error-red: #d32f2f;
+$highlight-red: #ffcccc;
+$selected-green: #d0e8d0;
+
+.main {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  color: $spotify-green;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: $gray;
+  margin-bottom: 20px;
+}
+
+.loading {
+  color: $dark-gray;
+  font-style: italic;
+}
+
+.error {
+  color: $error-red;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.leftPanel {
+  flex: 2;
+}
+
+.rightPanel {
+  flex: 1;
+  background: $light-gray;
+  padding: 15px;
+  border-radius: 6px;
+  min-width: 300px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  color: $dark-gray;
+  margin-bottom: 10px;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+
+  .listItem {
+    margin: 8px 0;
+    padding: 10px;
+    background: $light-gray;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background: darken($light-gray, 10%);
+    }
+
+    &.selected {
+      background: $selected-green;
+    }
+  }
+}
+
+.filter {
+  margin-bottom: 20px;
+  
+  label {
+    margin-right: 10px;
+  }
+  
+  select {
+    padding: 5px;
+    font-size: 1rem;
+  }
+}
+
+.lyrics {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+
+  .problematic {
+    background: $highlight-red;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 0.8rem;
+  color: #888;
+  text-align: center;
+}
